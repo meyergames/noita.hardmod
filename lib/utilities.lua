@@ -174,7 +174,7 @@ end
 ---@param entity_id ID of the entity
 ---@param variable_name Name of the variable
 ---@param create_if_nil If true, a new VSC of the given name will be created if it doesn't exist
----@return int value that matches the given VSC name
+---@return int Value that matches the given VSC name
 function GetInternalInt(entity_id, variable_name, create_if_nil)
 	local value = nil
 	local vscomps = EntityGetComponentIncludingDisabled(entity_id, "VariableStorageComponent")
@@ -248,4 +248,15 @@ function RaiseInternalInt(entity_id, variable_name, increment)
 			value_int = increment
 		})
 	end
+end
+
+function Remap( value, inMin, inMax, outMin, outMax )
+    if inMax == inMin then
+        error( "Input range cannot have zero length" )
+    end
+
+    -- normalise the input value to a 0‑1 scale
+    local t = (value - inMin) / (inMax - inMin)
+
+    return outMin + t * (outMax - outMin)
 end
