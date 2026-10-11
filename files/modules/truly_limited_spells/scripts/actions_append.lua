@@ -263,14 +263,14 @@ if actions ~= nil then
 	    	never_unlimited = true,
 	    },
 
-	    ["D2D_DELTA"] = {
-	    	max_uses = 30,
-	    	never_unlimited = true,
-	    },
-
 	    ["ZETA"] = {
 			max_uses = 30,
 			never_unlimited = true,
+	    },
+
+	    ["RESET"] = {
+	    	spawn_level = "0",
+	    	spawn_probability = "0",
 	    },
 	}
 
