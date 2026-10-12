@@ -33,6 +33,11 @@ local module_data = {
         ui_desc = "The Chainsaw spell no longer reduces cast delay to 0.",
     },
     {
+        id      = "no_more_max_hp_cheesing",
+        ui_name = "Heartless Mage",
+        ui_desc = "The heart mage trick no longer works. Neither does worm farming.",
+    },
+    {
         id      = "worse_hearts",
         ui_name = "Worse Hearts",
         ui_desc = "Temple hearts no longer increase your max health.",
